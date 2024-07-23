@@ -16,8 +16,4 @@ public static class Extensions
         stringBuilder.Append(Environment.NewLine);
     }
 
-    public static void AppendCollection(this StringBuilder stringbuilder, List<CPU> hardwareInfoCpuList)
-    {
-        throw new NotImplementedException();
-    }
 }
