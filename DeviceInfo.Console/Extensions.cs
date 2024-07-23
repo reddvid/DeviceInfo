@@ -3,13 +3,6 @@ using Hardware.Info;
 
 namespace DeviceInfo.Console;
 
-public class DeviceList<T>
-{
-    public void ToString(T device)
-    {
-    }
-}
-
 public static class Extensions
 {
     public static void AppendCollection<T>(this StringBuilder stringBuilder, IEnumerable<T> devices, string? title = "Generic Device")
