@@ -4,9 +4,8 @@ using Hardware.Info;
 
 if (args.Length != 0)
 {
-    var dataArg = args[1];
-
-    Console.WriteLine($"Getting info for {args[0]} PC");
+    var dataArg =
+        args[0].StartsWith('-') ? args[0] : args[1];
 
     if (dataArg is "--all" or "-a" or "" or ".")
     {
