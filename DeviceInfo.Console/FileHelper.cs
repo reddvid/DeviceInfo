@@ -22,6 +22,7 @@ public static class FileHelper
     {
         var toast = new ToastContentBuilder()
             .AddText("Device Info Saved!");
+        toast.SetProtocolActivation(new Uri($"file:///{path}"), null);
         toast.Show();
     }
 }

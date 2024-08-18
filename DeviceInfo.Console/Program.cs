@@ -2,58 +2,27 @@
 using DeviceInfo.Console;
 using Hardware.Info;
 
-string? userName;
-HardwareInfo hardwareInfo = new();
-hardwareInfo.RefreshAll();
-string? fileName;
+var dataArg = args[1];
 
-StringBuilder stringBuilder = new();
-var now = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+Console.WriteLine($"Getting info for {args[0]} PC");
 
-fileName = $"PC - {now}";
-
-if (args.Length != 0)
+if (dataArg is "--all" or "-a" or "" or ".")
 {
-    userName = args.FirstOrDefault();
-    stringBuilder.Append(userName);
-    stringBuilder.Append(Environment.NewLine);
+    Console.WriteLine("Getting all info.");
+
+    await GetDeviceInfo(args);
+
+    await GetAppList(args);
 }
+else if (dataArg is "--system" or "-s" or "--devices" or "-d")
+{
+    Console.WriteLine("Getting device hardware info.");
 
-stringBuilder.Append(now);
-stringBuilder.Append(Environment.NewLine);
+    await GetDeviceInfo(args);
+}
+else if (dataArg is "--apps" or "-p")
+{
+    Console.WriteLine("Getting app list.");
 
-// Get Devices
-
-// CPU
-stringBuilder.AppendCollection(hardwareInfo.CpuList, "CPU");
-// Motherboard
-stringBuilder.AppendCollection(hardwareInfo.MotherboardList, "Motherboard");
-// BIOS
-stringBuilder.AppendCollection(hardwareInfo.BiosList, "BIOS");
-// RAM
-stringBuilder.AppendCollection(hardwareInfo.MemoryList, "RAM");
-// Drives
-stringBuilder.AppendCollection(hardwareInfo.DriveList, "Drives");
-// OS
-stringBuilder.Append(hardwareInfo.OperatingSystem, "Operating System");
-// Network
-stringBuilder.AppendCollection(hardwareInfo.NetworkAdapterList, "Network Adapters");
-// Video Adapters
-stringBuilder.AppendCollection(hardwareInfo.VideoControllerList, "Video Adapters");
-// Audio Adapters
-stringBuilder.AppendCollection(hardwareInfo.SoundDeviceList, "Sound Devices");
-
-// Peripherals
-
-// Keyboard
-stringBuilder.AppendCollection(hardwareInfo.KeyboardList, "Keyboards");
-// Mouse
-stringBuilder.AppendCollection(hardwareInfo.MouseList, "Mice");
-// Monitors
-stringBuilder.AppendCollection(hardwareInfo.MonitorList, "Monitors");
-
-// Write to Text
-FileHelper.CreateFileAndWriteText(fileName, stringBuilder);
-
-
-Console.WriteLine(stringBuilder.ToString());
+    await GetAppList(args);
+}
