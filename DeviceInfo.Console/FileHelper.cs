@@ -20,9 +20,9 @@ public static class FileHelper
 
     private static void SendNotification(string path)
     {
-        var toast = new ToastContentBuilder()
-            .AddText("Device Info Saved!");
-        toast.SetProtocolActivation(new Uri($"file:///{path}"), null);
-        toast.Show();
+        // var toast = new ToastContentBuilder()
+        //     .AddText("Device Info Saved!");
+        // toast.SetProtocolActivation(new Uri($"file:///{path}"), null);
+        // toast.Show();
     }
 }

@@ -1,11 +1,14 @@
-﻿using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Text;
 using DeviceInfo.Console;
 using Hardware.Info;
 using Microsoft.Win32;
 
+
+[SuppressMessage("ReSharper", "CheckNamespace")]
 public partial class Program
 {
-    public static Task GetDeviceInfo(string[] args)
+    private static Task GetDeviceInfo(string[] args)
     {
         HardwareInfo hardwareInfo = new();
         hardwareInfo.RefreshAll();
@@ -60,10 +63,12 @@ public partial class Program
 // Write to Text
         FileHelper.CreateFileAndWriteText(fileName, stringBuilder);
 
+        System.Console.WriteLine("Finished getting hardware info.");
+
         return Task.CompletedTask;
     }
 
-    public static Task GetAppList(string[] args)
+    private static Task GetAppList(string[] args)
     {
         StringBuilder stringBuilder = new();
         var now = DateTime.Now.ToString("yyyyMMdd_HHmmss");
@@ -103,13 +108,19 @@ public partial class Program
                 stringBuilder.Append(appName);
                 stringBuilder.Append(Environment.NewLine);
             }
-            
+
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append($"Found {appCount} installed apps!");
         }
-        
+
+        System.Console.WriteLine("Finished getting apps.");
+
         FileHelper.CreateFileAndWriteText(fileName, stringBuilder);
 
         return Task.CompletedTask;
+    }
+
+    private static void ShowError()
+    {
     }
 }
