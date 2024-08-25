@@ -1,7 +1,7 @@
 ﻿using System.Text;
+using CommandLine.Text;
 using DeviceInfo.Console;
 using Hardware.Info;
-
 
 if (args.Length != 0)
 {
