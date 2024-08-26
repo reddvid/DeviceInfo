@@ -8,7 +8,7 @@ using Microsoft.Win32;
 [SuppressMessage("ReSharper", "CheckNamespace")]
 public partial class Program
 {
-    private static Task GetDeviceInfo(string[] args)
+    private static void GetDeviceInfo(string fileName)
     {
         HardwareInfo hardwareInfo = new();
         hardwareInfo.RefreshAll();
@@ -16,16 +16,9 @@ public partial class Program
         StringBuilder stringBuilder = new();
         var now = DateTime.Now.ToString("yyyyMMdd_HHmmss");
 
-        var fileName = $"PC - {now} Device Info";
-
-        if (args.Length != 0)
-        {
-            var pcName = args.FirstOrDefault();
-
-            fileName = $"{pcName} - {now} Device Info";
-            stringBuilder.Append(pcName);
-            stringBuilder.Append(Environment.NewLine);
-        }
+        fileName = $"{fileName} - {now} Device Info";
+        stringBuilder.Append(fileName);
+        stringBuilder.Append(Environment.NewLine);
 
         stringBuilder.Append(now);
         stringBuilder.Append(Environment.NewLine);
@@ -64,25 +57,16 @@ public partial class Program
         FileHelper.CreateFileAndWriteText(fileName, stringBuilder);
 
         System.Console.WriteLine("Finished getting hardware info.");
-
-        return Task.CompletedTask;
     }
 
-    private static Task GetAppList(string[] args)
+    private static void GetAppList(string fileName)
     {
         StringBuilder stringBuilder = new();
         var now = DateTime.Now.ToString("yyyyMMdd_HHmmss");
 
-        var fileName = $"PC - {now} App List";
-
-        if (args.Length != 0)
-        {
-            var pcName = args.FirstOrDefault();
-
-            fileName = $"{pcName} - {now} App List";
-            stringBuilder.Append(pcName);
-            stringBuilder.Append(Environment.NewLine);
-        }
+        fileName = $"{fileName} - {now} App List";
+        stringBuilder.Append(fileName);
+        stringBuilder.Append(Environment.NewLine);
 
         stringBuilder.Append(now);
         stringBuilder.Append(Environment.NewLine);
@@ -92,7 +76,7 @@ public partial class Program
         {
             if (key == null)
             {
-                return Task.CompletedTask;
+                return;
             }
 
             int appCount = 0;
@@ -104,8 +88,10 @@ public partial class Program
                 if (string.IsNullOrWhiteSpace(subkey.GetValue("DisplayName")?.ToString())) continue;
 
                 var appName = subkey.GetValue("DisplayName")?.ToString();
+                var appVersion = subkey.GetValue("DisplayVersion")?.ToString();
+                
                 appCount++;
-                stringBuilder.Append(appName);
+                stringBuilder.Append($"{appName} - {appVersion}");
                 stringBuilder.Append(Environment.NewLine);
             }
 
@@ -117,7 +103,7 @@ public partial class Program
 
         FileHelper.CreateFileAndWriteText(fileName, stringBuilder);
 
-        return Task.CompletedTask;
+        return;
     }
 
     private static void ShowError()
