@@ -19,8 +19,6 @@ public partial class Program
         fileName = $"{fileName} - {now} Device Info";
         stringBuilder.Append(fileName);
         stringBuilder.Append(Environment.NewLine);
-
-        stringBuilder.Append(now);
         stringBuilder.Append(Environment.NewLine);
 
 // Get Devices
@@ -55,8 +53,6 @@ public partial class Program
 
 // Write to Text
         FileHelper.CreateFileAndWriteText(fileName, stringBuilder);
-
-        System.Console.WriteLine("Finished getting hardware info.");
     }
 
     private static void GetAppList(string? fileName)
@@ -67,8 +63,6 @@ public partial class Program
         fileName = $"{fileName} - {now} App List";
         stringBuilder.Append(fileName);
         stringBuilder.Append(Environment.NewLine);
-
-        stringBuilder.Append(now);
         stringBuilder.Append(Environment.NewLine);
 
         string registryKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
@@ -98,8 +92,6 @@ public partial class Program
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append($"Found {appCount} installed apps!");
         }
-
-        System.Console.WriteLine("Finished getting apps.");
 
         FileHelper.CreateFileAndWriteText(fileName, stringBuilder);
 

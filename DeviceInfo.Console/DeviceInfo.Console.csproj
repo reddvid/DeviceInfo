@@ -10,8 +10,9 @@
 
     <ItemGroup>
         <PackageReference Include="CommandLineParser" Version="2.9.1" />
-        <PackageReference Include="Hardware.Info" Version="100.1.0.1"/>
-        <PackageReference Include="CommunityToolkit.WinUI.Notifications" Version="7.1.2"/>
+        <PackageReference Include="Hardware.Info" Version="100.1.0.1" />
+        <PackageReference Include="CommunityToolkit.WinUI.Notifications" Version="7.1.2" />
+        <PackageReference Include="Spectre.Console" Version="0.49.1" />
     </ItemGroup>
 
 </Project>

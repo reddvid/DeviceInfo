@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics;
+using System.Reflection;
 using System.Text;
 using CommunityToolkit.WinUI.Notifications;
 
@@ -9,14 +10,20 @@ public static class FileHelper
     public static void CreateFileAndWriteText(string? fileName, StringBuilder stringBuilder)
     {
         var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        System.Console.WriteLine(saveDirectory);
         var path = saveDirectory + $@"\{fileName}.txt";
         using FileStream fs = File.Create(path);
         fs.Close();
         File.WriteAllText(path, stringBuilder.ToString());
 
         SendNotification(path);
-        
+    }
+
+    public static void OpenFolder()
+    {
+        ProcessStartInfo psi = new ProcessStartInfo();
+        var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+        Process.Start("explorer.exe", saveDirectory);
     }
 
     private static void SendNotification(string path)
