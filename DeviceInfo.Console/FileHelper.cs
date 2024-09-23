@@ -1,15 +1,16 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 using CommunityToolkit.WinUI.Notifications;
 
 namespace DeviceInfo.Console;
 
 public static class FileHelper
 {
-    public static void CreateFileAndWriteText(string fileName, StringBuilder stringBuilder)
+    public static void CreateFileAndWriteText(string? fileName, StringBuilder stringBuilder)
     {
-        var desktopDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-        System.Console.WriteLine(desktopDirectory);
-        var path = desktopDirectory + $@"\{fileName}.txt";
+        var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        System.Console.WriteLine(saveDirectory);
+        var path = saveDirectory + $@"\{fileName}.txt";
         using FileStream fs = File.Create(path);
         fs.Close();
         File.WriteAllText(path, stringBuilder.ToString());

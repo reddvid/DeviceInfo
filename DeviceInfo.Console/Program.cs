@@ -29,22 +29,21 @@ Parser.Default.ParseArguments<Options>(args)
         Console.WriteLine($"File name: {options.MachineName}");
         var fileName = options.MachineName;
 
-        if (!string.IsNullOrWhiteSpace(options.InfoType))
+        if (string.IsNullOrWhiteSpace(options.InfoType)) return;
+        
+        if (InfoType.Hardware.Contains(options.InfoType.ToLower()))
         {
-            if (InfoType.Hardware.Contains(options.InfoType.ToLower()))
-            {
-                GetDeviceInfo(fileName);
-            }
+            GetDeviceInfo(fileName);
+        }
 
-            if (InfoType.Software.Contains(options.InfoType.ToLower()))
-            {
-                GetAppList(fileName);
-            }
+        if (InfoType.Software.Contains(options.InfoType.ToLower()))
+        {
+            GetAppList(fileName);
+        }
 
-            if (InfoType.All.Contains(options.InfoType.ToLower()))
-            {
-                GetDeviceInfo(fileName);
-                GetAppList(fileName);
-            }
+        if (InfoType.All.Contains(options.InfoType.ToLower()))
+        {
+            GetDeviceInfo(fileName);
+            GetAppList(fileName);
         }
     });

@@ -8,7 +8,7 @@ using Microsoft.Win32;
 [SuppressMessage("ReSharper", "CheckNamespace")]
 public partial class Program
 {
-    private static void GetDeviceInfo(string fileName)
+    private static void GetDeviceInfo(string? fileName)
     {
         HardwareInfo hardwareInfo = new();
         hardwareInfo.RefreshAll();
@@ -59,7 +59,7 @@ public partial class Program
         System.Console.WriteLine("Finished getting hardware info.");
     }
 
-    private static void GetAppList(string fileName)
+    private static void GetAppList(string? fileName)
     {
         StringBuilder stringBuilder = new();
         var now = DateTime.Now.ToString("yyyyMMdd_HHmmss");
