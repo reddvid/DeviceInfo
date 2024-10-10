@@ -9,7 +9,7 @@ AnsiConsole.Write(
 new FigletText("DeviceInfo")
     .LeftJustified()
     .Color(Color.Green));
-Console.Write($"by {TerminalURL("Red David", "https://reddavid.me")}".PadLeft(23, '-'));
+Console.Write($"by {TerminalUrl("Red David", "https://reddavid.me")}".PadLeft(23, '-'));
 Console.WriteLine(Environment.NewLine);
 
 if (args.Length > 0)
@@ -21,7 +21,7 @@ if (args.Length > 0)
 
             var fileName = options.MachineName;
 
-            if (InfoType.Hardware.Contains(options.InfoType.ToLower()))
+            if (InfoType.Hardware.Contains(options.InfoType?.ToLower()))
             {
                 AnsiConsole.Status()
                     .Start($"[red]Getting Hardware Info for [underline]{fileName}[/].[/]", ctx =>
@@ -33,7 +33,7 @@ if (args.Length > 0)
                     });
             }
 
-            if (InfoType.Software.Contains(options.InfoType.ToLower()))
+            if (InfoType.Software.Contains(options.InfoType?.ToLower()))
             {
                 AnsiConsole.Status()
                     .Start($"[red]Getting Software Info for [underline]{fileName}[/].[/]", ctx =>
@@ -45,7 +45,7 @@ if (args.Length > 0)
                     });
             }
 
-            if (InfoType.All.Contains(options.InfoType.ToLower()))
+            if (InfoType.All.Contains(options.InfoType?.ToLower()))
             {
                 AnsiConsole.Status()
                      .Start($"[red]Getting Hardware and Software Info for [underline]{fileName}[/].[/]", ctx =>
@@ -90,5 +90,5 @@ AnsiConsole.MarkupLine("[yellow]The folder containing the files should open.[/]"
 Console.WriteLine(Environment.NewLine);
 FileHelper.OpenFolder();
 
-static string TerminalURL(string caption, string url) => $"\u001B]8;;{url}\a{caption}\u001B]8;;\a";
+static string TerminalUrl(string caption, string url) => $"\u001B]8;;{url}\a{caption}\u001B]8;;\a";
 
