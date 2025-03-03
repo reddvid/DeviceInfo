@@ -20,8 +20,8 @@ public static class FileHelper
 
     public static void OpenFolder()
     {
-        ProcessStartInfo psi = new ProcessStartInfo();
-        var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+            ?? Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
         Process.Start("explorer.exe", saveDirectory);
     }
