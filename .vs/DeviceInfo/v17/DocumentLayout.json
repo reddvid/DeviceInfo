@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\DeviceInfo\\",
+  "WorkspaceRootPath": "E:\\DeviceInfo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|f:\\deviceinfo\\deviceinfo.console\\deviceinfo.console.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\deviceinfo.console.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|f:\\deviceinfo\\deviceinfo.console\\deviceinfo.console.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\deviceinfo.console.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|f:\\deviceinfo\\deviceinfo.console\\program.methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\program.methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|f:\\deviceinfo\\deviceinfo.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|e:\\deviceinfo\\deviceinfo.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|f:\\deviceinfo\\deviceinfo.console\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|e:\\deviceinfo\\deviceinfo.console\\deviceinfo.console.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\deviceinfo.console.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|e:\\deviceinfo\\deviceinfo.console\\deviceinfo.console.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\deviceinfo.console.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|e:\\deviceinfo\\deviceinfo.console\\program.methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\program.methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|e:\\deviceinfo\\deviceinfo.console\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4934DA9-309E-421E-95B1-CF14B8E30C92}|DeviceInfo.Console\\DeviceInfo.Console.csproj|solutionrelative:deviceinfo.console\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,13 +38,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\DeviceInfo\\DeviceInfo.Console\\Program.cs",
+              "DocumentMoniker": "E:\\DeviceInfo\\DeviceInfo.Console\\Program.cs",
               "RelativeDocumentMoniker": "DeviceInfo.Console\\Program.cs",
-              "ToolTip": "F:\\DeviceInfo\\DeviceInfo.Console\\Program.cs",
+              "ToolTip": "E:\\DeviceInfo\\DeviceInfo.Console\\Program.cs",
               "RelativeToolTip": "DeviceInfo.Console\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T01:59:09.176Z",
               "EditorCaption": ""
@@ -53,14 +53,17 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "FileHelper.cs",
-              "DocumentMoniker": "F:\\DeviceInfo\\DeviceInfo.Console\\FileHelper.cs",
+              "DocumentMoniker": "E:\\DeviceInfo\\DeviceInfo.Console\\FileHelper.cs",
               "RelativeDocumentMoniker": "DeviceInfo.Console\\FileHelper.cs",
-              "ToolTip": "F:\\DeviceInfo\\DeviceInfo.Console\\FileHelper.cs",
+              "ToolTip": "E:\\DeviceInfo\\DeviceInfo.Console\\FileHelper.cs",
               "RelativeToolTip": "DeviceInfo.Console\\FileHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T01:52:44.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T01:52:44.284Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         },
@@ -70,11 +73,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeviceInfo.Console",
-              "DocumentMoniker": "F:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
+              "DocumentIndex": 1,
+              "Title": "DeviceInfo.Console.csproj",
+              "DocumentMoniker": "E:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
               "RelativeDocumentMoniker": "DeviceInfo.Console\\DeviceInfo.Console.csproj",
-              "ToolTip": "F:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
+              "ToolTip": "E:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
               "RelativeToolTip": "DeviceInfo.Console\\DeviceInfo.Console.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -83,28 +86,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DeviceInfo.Console",
-              "DocumentMoniker": "F:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
+              "DocumentMoniker": "E:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
               "RelativeDocumentMoniker": "DeviceInfo.Console\\DeviceInfo.Console.csproj",
-              "ToolTip": "F:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
+              "ToolTip": "E:\\DeviceInfo\\DeviceInfo.Console\\DeviceInfo.Console.csproj",
               "RelativeToolTip": "DeviceInfo.Console\\DeviceInfo.Console.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-23T03:07:43.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T03:07:43.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.Methods.cs",
-              "DocumentMoniker": "F:\\DeviceInfo\\DeviceInfo.Console\\Program.Methods.cs",
+              "DocumentMoniker": "E:\\DeviceInfo\\DeviceInfo.Console\\Program.Methods.cs",
               "RelativeDocumentMoniker": "DeviceInfo.Console\\Program.Methods.cs",
-              "ToolTip": "F:\\DeviceInfo\\DeviceInfo.Console\\Program.Methods.cs",
+              "ToolTip": "E:\\DeviceInfo\\DeviceInfo.Console\\Program.Methods.cs",
               "RelativeToolTip": "DeviceInfo.Console\\Program.Methods.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAowBIAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T01:51:18.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T01:51:18.335Z"
             }
           ]
         }

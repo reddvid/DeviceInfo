@@ -9,7 +9,8 @@ public static class FileHelper
 {
    public static void CreateFileAndWriteText(string? fileName, StringBuilder stringBuilder)
    {
-      var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+      var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+          ?? Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
       var path = saveDirectory + $@"\{fileName}.txt";
       using FileStream fs = File.Create(path);
       fs.Close();
