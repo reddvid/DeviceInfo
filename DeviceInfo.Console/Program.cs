@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 using CommandLine;
 using CommandLine.Text;
 using DeviceInfo.Console;
@@ -108,10 +109,13 @@ static string TerminalUrl(string caption, string url) => $"\u001B]8;;{url}\a{cap
 /// <summary> Show a message that gathering info is done and open the folder containing the files </summary>
 static void Finalize()
 {
+    var saveDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+            ?? Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
     Console.WriteLine(Environment.NewLine);
-    AnsiConsole.Markup($"[bold red]Finished getting device info.[/]");
+    AnsiConsole.Markup("[bold red]Finished getting device info.[/]");
     Console.WriteLine(Environment.NewLine);
-    AnsiConsole.MarkupLine($"[yellow]The {TerminalUrl("folder", )} containing the files should open.[/]");
+    AnsiConsole.MarkupLine($"[yellow]Files saved to {saveDirectory}\\.[/]");
     Console.WriteLine(Environment.NewLine);
     FileHelper.OpenFolder();
 }

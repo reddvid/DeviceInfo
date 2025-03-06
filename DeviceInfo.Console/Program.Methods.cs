@@ -99,10 +99,6 @@ public partial class Program
       return;
    }
 
-   private static void ShowError()
-   {
-   }
-
    static bool IsRunningAsAdministrator()
    {
       using WindowsIdentity identity = WindowsIdentity.GetCurrent();
